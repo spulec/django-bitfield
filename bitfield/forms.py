@@ -7,7 +7,10 @@ from .types import BitHandler
 class BitFieldCheckboxSelectMultiple(CheckboxSelectMultiple):
     def render(self, name, value, attrs=None, choices=()):
         if value is not None:
-            value = [k for k, v in value if v]
+            if value == 0:
+                value = []
+            else:
+                value = [k for k, v in value if v]
         return super(BitFieldCheckboxSelectMultiple, self).render(
           name, value, attrs=attrs, choices=enumerate(choices))
 
