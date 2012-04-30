@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-bitfield',
-    version='1.5.0.1',
+    version='1.5.0.2',
     author='DISQUS',
     author_email='opensource@disqus.com',
     url='http://github.com/disqus/django-bitfield',
